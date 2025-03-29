@@ -11,10 +11,14 @@
                 "-Wall",
                 "-pedantic-errors",
                 "-g",
-                "${file}",
+                // "${file}",
+                "*.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "${fileBasenameNoExtension}.exe"
             ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
